@@ -1,5 +1,4 @@
-$LOAD_PATH.unshift File.join(File.expand_path('.'),  'proto-lib')
-
+$LOAD_PATH.unshift File.expand_path(File.join( __dir__, '..', 'proto-lib'))
 
 require 'headscale/v1/headscale_services_pb'
 

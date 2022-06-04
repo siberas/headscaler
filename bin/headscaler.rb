@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
-require 'devenv'
+$LOAD_PATH.unshift File.expand_path(File.join(__dir__,'..','lib'))
 
-require 'headscaler'
 require 'optimist'
 require 'pry'
 require 'grpc'
+
+require 'headscaler'
+
 #require 'grpc-tools'
 
 OPTS = Optimist::options do
@@ -47,8 +49,6 @@ end
 Headscaler.url = OPTS[:url] unless OPTS[:url].empty?
 Headscaler.apikey = OPTS[:apikey] unless OPTS[:apikey].empty?
 Headscaler.insecure = true if OPTS[:insecure]
-
-Headscaler::RequestFactory.init
 
 req_name = ARGV[0]
 # create the request instance

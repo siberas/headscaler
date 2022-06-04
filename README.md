@@ -5,4 +5,14 @@ intendend to replace the original cli, thus it's not fully tested and might not 
 because of missing options.
 
 # How-To
+## Connection settings
+To make headscaler connect to your headscaler grpc interface it needs the url and the apikey.
+Those parameters can be set via the headscale environment variables HEADSCALE_CLI_ADDRESS and HEADSCALE_CLI_API_KEY.
+They work similar the the environment variables used by the original headscale-cli.
+
+When using the ruby headscale.rb programm they can be set via command parameters which will overwrite
+the environment variables.
+
+
+
  

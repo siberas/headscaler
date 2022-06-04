@@ -24,4 +24,6 @@ module Headscaler
 
 
   end
+
+  RequestFactory.init
 end
