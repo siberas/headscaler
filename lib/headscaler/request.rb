@@ -24,6 +24,7 @@ module Headscaler
       end
 
 
+      binding.pry
       req_opts = cleanopts(opts)
 
       m = self.class.new req_opts

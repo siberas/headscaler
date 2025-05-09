@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-$LOAD_PATH.unshift File.expand_path(File.join(__dir__,'..','lib'))
+$LOAD_PATH.unshift File.expand_path(File.join(__dir__, '..', 'lib'))
 
 require 'optimist'
 require 'pry'
@@ -7,12 +7,19 @@ require 'grpc'
 
 require 'headscaler'
 
-#require 'grpc-tools'
+# require 'grpc-tools'
 
 OPTS = Optimist::options do
   version '(c) 2022 HeadscaleR'
   banner <<-EOS
     library for managing headscale via grpc
+
+  Example:
+Execute list_machines request:
+bundle exec ruby -v bin/headscaler.rb list_machines
+
+to list available requests:
+bundle exec bin/headscaler.rb -l
   EOS
 
   opt :url, "url, default will be taken from environment HEADSCALE_CLI_ADDRESS", :type => :string, :default => ''
@@ -24,6 +31,7 @@ OPTS = Optimist::options do
   opt :expiration, "create expiration timestamp based on given duration (seconds), e.g. 3600 -> 1h"
   opt :list, "list available requests"
   opt :verbose, "verbose"
+  opt :request, "execute request"
   opt :debug, "jump into pry before executing the request"
 end
 
@@ -79,4 +87,5 @@ rescue => bang
   puts bang if $VERBOSE
   puts bang.backtrace if $DEBUG
 end
+
 

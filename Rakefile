@@ -1,0 +1,2 @@
+# ToDo: implement rake tasks to automatically create proto-lib
+#  grpc_tools_ruby_protoc -I ./headscale/proto/ -I ./googleapis --ruby_out=ruby_headscale_cli --grpc_out=ruby_headscale_cli ./headscale/proto/headscale/v1/routes.proto
