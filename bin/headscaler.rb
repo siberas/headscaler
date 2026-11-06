@@ -85,7 +85,7 @@ begin
 rescue => bang
   puts "!!! request failed :/"
   puts bang if $VERBOSE
-  puts bang.backtrace if $DEBUG
+  puts bang.backtrace if $BBHDEBUG
 end
 
 
