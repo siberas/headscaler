@@ -1,0 +1,26 @@
+# Bundler / gems
+/.bundle/
+/vendor/bundle/
+/pkg/
+*.gem
+
+# Test / coverage / tmp
+/coverage/
+/tmp/
+*.log
+
+# Local config & secrets
+.env
+.env.*
+*.key
+*.pem
+
+# IDEs / editors
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
